@@ -15,8 +15,6 @@
         // Renvoie le tableau
         return $array;
     }
-
-    array_push_unless_present($fruits, 'Ananas');
 ?>
 
 
@@ -50,11 +48,11 @@
     </p>
 
     <p>
-        Après avoir exécuté la commande <code>array_push($fruits, 'Ananas');</code>, le tableau $fruits contient:
+        Après avoir exécuté la commande <code>array_push_unless_present($fruits, 'Ananas');</code>, le tableau $fruits contient:
         <pre>
             <code>
 <?php
-    array_push($fruits, 'Ananas');
+    $fruits = array_push_unless_present($fruits, 'Ananas');
     print_r($fruits);
 ?>
             </code>
@@ -68,6 +66,18 @@
 <?php
     $result = in_array('Ananas', $fruits);
     var_dump($result);
+?>
+            </code>
+        </pre>
+    </p>
+
+    <p>
+        Après avoir exécuté la commande <code>array_push_unless_present($fruits, 'Ananas');</code>, le tableau $fruits contient:
+        <pre>
+            <code>
+<?php
+    $fruits = array_push_unless_present($fruits, 'Ananas');
+    print_r($fruits);
 ?>
             </code>
         </pre>
