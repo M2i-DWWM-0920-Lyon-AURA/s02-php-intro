@@ -6,7 +6,7 @@
     // mais seulement si cet élément n'était pas déjà présent dans ce tableau
     // - $array: le tableau à manipuler
     // - $item: l'élément à rajouter
-    function array_push_unless_present($array, $item) {
+    function array_push_unless_present(array $array, $item): array {
         // Si l'élément n'est pas présent dans le tableau
         if (!in_array($item, $array)) {
             // Ajoute l'élément à la fin du tableau
@@ -78,6 +78,18 @@
 <?php
     $fruits = array_push_unless_present($fruits, 'Ananas');
     print_r($fruits);
+?>
+            </code>
+        </pre>
+    </p>
+
+    <p>
+        A ce stade, la commande <code>join(', ', $fruits)</code> renvoie:
+        <pre>
+            <code>
+<?php
+    $result = join(', ', $fruits);
+    print_r($result);
 ?>
             </code>
         </pre>
