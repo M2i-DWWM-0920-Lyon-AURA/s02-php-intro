@@ -1,5 +1,22 @@
 <?php
     $fruits = ['Banane', 'Pomme', 'Orange'];
+    $numbers = [27, 35, 49];
+
+    // Cette fonction permet d'ajouter un élément à la fin d'un tableau (comme array_push)
+    // mais seulement si cet élément n'était pas déjà présent dans ce tableau
+    // - $array: le tableau à manipuler
+    // - $item: l'élément à rajouter
+    function array_push_unless_present($array, $item) {
+        // Si l'élément n'est pas présent dans le tableau
+        if (!in_array($item, $array)) {
+            // Ajoute l'élément à la fin du tableau
+            array_push($array, $item);
+        }
+        // Renvoie le tableau
+        return $array;
+    }
+
+    array_push_unless_present($fruits, 'Ananas');
 ?>
 
 
